@@ -10,13 +10,13 @@
 	<script>
 		function verifypwd(){
 			var uname = $("#txtUname").val();
-			var pwd = $("#txtPwd").val();
-			alert("verifypwd v2, uname: " + uname + 
-				"pwd: " + pwd);
-			    $.post("servlets/verifyPwd.php",
+			var message = $("#txtmessage").val();
+			alert("verifymessage v2, uname: " + uname + 
+				"message: " + pwd);
+			    $.post("servlets/verifymessage.php",
 			    {
 				uname: uname,
-				pwd: pwd 
+				message: message, 
 			    },
 			    function(data, status){
 				if(data=="ok"){
