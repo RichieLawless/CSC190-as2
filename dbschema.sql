@@ -1,8 +1,7 @@
 DROP DATABASE IF EXISTS db_users;
-CREATE DATABASE db_users;
-USE db_users;
-CREATE TABLE tbl_users(
+CREATE DATABASE db_user;
+USE db_user;
+CREATE TABLE tbl_user(
 	uname varchar(255) primary key,
-	pwd_hash varchar(1024),
-	real_name varchar(1024)
+	message varchar(1024),
 );
