@@ -34,6 +34,13 @@
 		return mysql_real_escape_string($txt, $link);
 	}
 
+	$sql = "CREATE DATABASE entries";
+	CREATE TABLE entries 
+	(
+	uname VARCHAR(30) NOT NULL;
+	message VARCHAR(250) NOT NULL;
+
+	)
 
 //TEST CASES
 if(1==2){

@@ -6,6 +6,7 @@
 		return md5($txt);
 	}
 	function insertUser($uname, $pwd, $real_name){
+		$dbname = "entries;
 		$uname = secure($uname);
 		$message = secure($message);
 
