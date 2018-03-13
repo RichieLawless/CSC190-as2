@@ -13,14 +13,14 @@
 			var message = $("#txtmessage").val();
 			alert("verifymessage v2, uname: " + uname + 
 				"message: " + pwd);
-			    $.post("servlets/verifymessage.php",
+			    $.post("servlets/list.php",
 			    {
 				uname: uname,
 				message: message, 
 			    },
 			    function(data, status){
 				if(data=="ok"){
-					window.location = "inbox.php";
+					window.location = "list.php";
 				}else{
 					alert("ERROR!");
 				}
