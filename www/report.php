@@ -8,12 +8,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script>
-		function verifypwd(){
+		function postmessage(){
 			var uname = $("#txtUname").val();
 			var message = $("#txtmessage").val();
-			alert("verifymessage v2, uname: " + uname + 
-				"message: " + pwd);
-			    $.post("servlets/list.php",
+			alert("User: " + uname + 
+				"message: " + message);
+			    $.post("servlets/postmessage.php",
 			    {
 				uname: uname,
 				message: message, 
@@ -32,8 +32,8 @@
 
 <div class="container">
 	<input type="text" id="txtUname"> <br />
-	<input type="password" id="txtPwd"> <br />
-	<button id="btnSubmit" onclick="verifypwd()">Login</button>
+	<input type="message" id="txtmessage"> <br />
+	<button id="btnSubmit" onclick="postmessage()">Send</button>
 
 </div>
 
