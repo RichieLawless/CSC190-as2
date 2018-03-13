@@ -5,10 +5,11 @@
 	function checksum($txt){
 		return md5($txt);
 	}
-	function insertUser($uname, $pwd, $real_name){
-		$dbname = "entries;
+
+	function insertUserMessage($uname, $message){
 		$uname = secure($uname);
-		$message = secure($message);
+		$message = secure(checksum($message));
+
 
 		$q = "INSERT INTO tbl_users(uname, message) VALUES ('$uname', '$message')";
 		executeSQL($q);
@@ -18,5 +19,8 @@
 if(1==2){
 	insertuser("User1", "He's Here");
 
+
+if(1==2){
+	insertUserMessage("User1", "He's Here");
 }
 ?>
